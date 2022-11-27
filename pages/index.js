@@ -1,7 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import * as Scroll from "react-scroll";
 import { Link, Element } from "react-scroll";
 
 export default function Home() {
@@ -11,7 +8,9 @@ export default function Home() {
     { title: "PAGE THREE", details: "Details of Page Three" },
     { title: "PAGE FOUR", details: "Details of Page Four" },
   ];
+
   const colors = ["#b8c7ce ", "#E9E948", "#f1f1f1 ", "#7bc191"];
+
   return (
     <>
       <Head>
@@ -25,46 +24,21 @@ export default function Home() {
 
       <div className="w-full pt-5 ">
         <div className="flex flex-wrap items-center justify-between px-12 ">
-          <Link
-            activeClass="active"
-            to="PAGE ONE"
-            spy
-            smooth
-            duration={70}
-            className="px-3 py-3 mb-2 bg-[#b8c7ce] rounded-xl border-2 border-white cursor-pointer"
-          >
-            Go To Page One
-          </Link>
-          <Link
-            activeClass="active"
-            to="PAGE TWO"
-            spy
-            smooth
-            duration={700}
-            className="px-3 py-3 mb-2 bg-[#E9E948] rounded-xl border-2 border-white cursor-pointer"
-          >
-            Go To Page Two
-          </Link>
-          <Link
-            activeClass="active"
-            to="PAGE THREE"
-            spy
-            smooth
-            duration={700}
-            className="px-3 py-3 mb-2 bg-[#f1f1f1] rounded-xl border-2 border-white cursor-pointer"
-          >
-            Go To Page Three
-          </Link>
-          <Link
-            activeClass="active"
-            to="PAGE FOUR"
-            spy
-            smooth
-            duration={700}
-            className="px-3 py-3 mb-2 bg-[#7bc191] rounded-xl border-2 border-white cursor-pointer"
-          >
-            Go To Page Four
-          </Link>
+          {pagesAndDetails.map((page, i) => (
+            <Link
+              activeClass="active"
+              to={page.title}
+              spy
+              smooth
+              duration={700}
+              className="px-3 py-3 mb-2  rounded-xl border-2 border-white cursor-pointer"
+              style={{
+                backgroundColor: colors[i],
+              }}
+            >
+              Go To {page.title}
+            </Link>
+          ))}
         </div>
         {pagesAndDetails.map((page, i) => (
           <div key={i}>
