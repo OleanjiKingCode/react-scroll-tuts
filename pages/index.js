@@ -4,10 +4,10 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const pagesAndDetails = [
-    { title: "PAGE ONE", details: "Details of Page One" },
-    { title: "PAGE TWO", details: "Details of Page Two" },
-    { title: "PAGE THREE", details: "Details of Page Three" },
-    { title: "PAGE FOUR", details: "Details of Page Four" },
+    { title: "PAGE ONE", details: "Details of Page One", color: "#36897A" },
+    { title: "PAGE TWO", details: "Details of Page Two", color: "#E9E948" },
+    { title: "PAGE THREE", details: "Details of Page Three", color: "#8D1DC5" },
+    { title: "PAGE FOUR", details: "Details of Page Four", color: "#52192B" },
   ];
 
   return (
@@ -21,14 +21,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full py-5 ">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="w-full ">
         {pagesAndDetails.map((page, i) => (
-          <div className="w-full h-screen" key={i}>
-            <div className="w-full mt-2 py-5 font-bold text-lg">
-              {page.title}
+          <div key={i}>
+            
+            <div
+              className={`w-full h-screen bg-[${page.color}] flex flex-col items-center text-center justify-center `}
+            >
+              <div className={`w-full mt-2 py-5 font-bold text-lg `}>
+                {page.title}
+              </div>
+              <div className="w-full  text-sm">{page.details}</div>
             </div>
-            <div className="w-full h-4/6 text-sm">{page.details}</div>
           </div>
         ))}
       </div>
