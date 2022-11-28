@@ -49,7 +49,7 @@ export default function Home() {
             {viewOne ? (
               <span>YOU ARE AT {pagesAndDetails[0].title}</span>
             ) : (
-              <span> Go To {pagesAndDetails[0].title}</span>
+              <span> GO TO {pagesAndDetails[0].title}</span>
             )}
           </Link>
           <Link
@@ -63,7 +63,7 @@ export default function Home() {
             {viewTwo ? (
               <span>YOU ARE AT {pagesAndDetails[1].title}</span>
             ) : (
-              <span> Go To {pagesAndDetails[1].title}</span>
+              <span> GO TO {pagesAndDetails[1].title}</span>
             )}
           </Link>
           <Link
@@ -77,7 +77,7 @@ export default function Home() {
             {viewThree ? (
               <span>YOU ARE AT {pagesAndDetails[2].title}</span>
             ) : (
-              <span> Go To {pagesAndDetails[2].title}</span>
+              <span> GO TO {pagesAndDetails[2].title}</span>
             )}
           </Link>
           <Link
@@ -91,7 +91,7 @@ export default function Home() {
             {viewFour ? (
               <span>YOU ARE AT {pagesAndDetails[3].title}</span>
             ) : (
-              <span> Go To {pagesAndDetails[3].title}</span>
+              <span> GO TO {pagesAndDetails[3].title}</span>
             )}
           </Link>
         </div>
